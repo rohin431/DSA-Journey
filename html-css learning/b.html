@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWOT Analysis: Rohin Sharma</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600;800&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+            overflow: hidden;
+        }
+
+        /* Background moving shapes */
+        .shape {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: -1;
+            animation: float 10s infinite alternate;
+        }
+        .shape-1 { background: #e94560; width: 300px; height: 300px; top: -50px; left: -50px; }
+        .shape-2 { background: #0f3460; width: 400px; height: 400px; bottom: -100px; right: -100px; animation-delay: -5s; }
+
+        @keyframes float {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(30px, 50px); }
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1000px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            perspective: 1000px;
+            padding-bottom: 50px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+            animation: slideDown 1s ease-out;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin: 0;
+            background: -webkit-linear-gradient(#fff, #aebaf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+
+        .swot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            justify-items: center;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            opacity: 0;
+            animation: popIn 0.8s forwards;
+            width: 100%;
+            max-width: 400px;
+            box-sizing: border-box;
+        }
+
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Staggered Animation Delays */
+        .card:nth-child(1) { animation-delay: 0.3s; border-left: 5px solid #4caf50; } /* Strengths */
+        .card:nth-child(2) { animation-delay: 0.5s; border-left: 5px solid #ff9800; } /* Weaknesses */
+        .card:nth-child(3) { animation-delay: 0.7s; border-left: 5px solid #2196f3; } /* Opportunities */
+        
+        /* MODIFIED: Threats Card Centering */
+        .card:nth-child(4) { 
+            animation-delay: 0.9s; 
+            border-left: 5px solid #f44336; 
+            grid-column: 1 / -1; /* Spans the full width of the grid */
+            margin: 20px auto 0 auto; /* Centers horizontally */
+            max-width: 600px; /* Slightly wider for emphasis */
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card li {
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            opacity: 0.9;
+        }
+
+        .card li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: rgba(255,255,255,0.5);
+        }
+
+        /* Animations */
+        @keyframes slideDown {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.8) translateY(50px); opacity: 0; }
+            to { transform: scale(1) translateY(0); opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+             body {
+                align-items: flex-start;
+                padding-top: 40px;
+                overflow-y: auto;
+             }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="shape shape-1"></div>
+    <div class="shape shape-2"></div>
+
+    <div class="container">
+        <header>
+            <h1>ROHIN SHARMA</h1>
+            <p style="letter-spacing: 3px; opacity: 0.7;">SWOT ANALYSIS</p>
+        </header>
+
+        <div class="swot-grid">
+            <div class="card">
+                <h2 style="color: #4caf50;">Strengths</h2>
+                <ul>
+                    <li>Flawless work</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2 style="color: #ff9800;">Weaknesses</h2>
+                <ul>
+                    <li>Laziness</li>
+                    <li>Lack of participation in project work</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2 style="color: #2196f3;">Opportunities</h2>
+                <ul>
+                    <li>Helped in video editing</li>
+                    <li>Can leverage editing skills for future projects</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2 style="color: #f44336;">Threats</h2>
+                <ul>
+                    <li>Lack of participation could leave the project vulnerable</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

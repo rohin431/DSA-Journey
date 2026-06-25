@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eAkadamik | Work-Flow</title>
+    <style>
+        /* --- Base Setup --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+        body { background-color: #eaebed; /* Light gray background matching the photo */ color: #333; height: 100vh; display: flex; flex-direction: column; }
+
+        /* --- Top Header (Terracotta Orange) --- */
+        .top-header {
+            background-color: #cc5500;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .header-left { display: flex; align-items: center; gap: 20px; }
+        .logo-text h1 { font-size: 20px; font-weight: normal; }
+        .logo-text p { font-size: 9px; letter-spacing: 1px; }
+        .university-name { border-left: 1px solid rgba(255,255,255,0.4); padding-left: 20px; }
+        .university-name h2 { font-size: 14px; font-weight: normal; }
+        .header-right { text-align: right; font-size: 12px; display: flex; align-items: center; gap: 15px;}
+        
+        /* --- Main Navigation Bar --- */
+        .main-nav {
+            background-color: #e8dbce; /* Creamy beige */
+            display: flex;
+            border-bottom: 1px solid #ccc;
+        }
+        .main-nav a {
+            padding: 12px 25px;
+            text-decoration: none;
+            color: #555;
+            font-size: 11px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        /* Active Tab Styling - Now on Work-Flow */
+        .main-nav a.active { background-color: #eaebed; color: #555; border-top: 3px solid #cc5500; }
+        
+        /* --- Main Layout --- */
+        .container {
+            padding: 30px;
+            flex-grow: 1;
+        }
+
+        /* --- Work-Flow Profile Card --- */
+        .workflow-card {
+            width: 250px;
+            background-color: #f4ede4; /* Light cream to match the image */
+            border: 1px solid #d9d0c5;
+            padding: 25px 15px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .profile-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            border: 2px solid #555;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 35px;
+            background: white;
+            color: #555;
+        }
+
+        .workflow-card h3 {
+            font-size: 15px;
+            color: #333;
+            margin-bottom: 2px;
+            font-weight: normal;
+        }
+
+        .workflow-card p {
+            font-size: 13px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        /* Teal Buttons */
+        .action-btn {
+            display: block;
+            width: 100%;
+            background-color: #2b8b8b; /* Teal matching the image */
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            margin-bottom: 8px;
+            font-size: 12px;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .action-btn:hover {
+            background-color: #1e6666;
+        }
+
+        /* --- Footer --- */
+        .footer {
+            background-color: #cc5500;
+            color: rgba(255,255,255,0.8);
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 40px;
+            font-size: 11px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="header-left">
+            <div class="logo-text">
+                <h1>e-Akadamik</h1>
+                <p>UNIFIED ACADEMIC SYSTEM</p>
+            </div>
+            <div class="university-name">
+                <h2>PANJAB UNIVERSITY</h2>
+                <h2>CHANDIGARH</h2>
+            </div>
+        </div>
+        <div class="header-right">
+            <p>Welcome<br><strong>{{ user.name }} ({{ user.role }})</strong></p>
+            <div style="font-size: 24px;">👤</div>
+        </div>
+    </header>
+
+    <nav class="main-nav">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/workflow" class="active">Work-Flow</a>
+        <a href="#">Result</a>
+        <a href="#">Attendance</a>
+        <a href="#">Syllabus</a>
+        <a href="#">DocUpload</a>
+        <a href="#">Settings</a>
+        <a href="/logout" style="margin-left: auto;">Logout</a>
+    </nav>
+
+    <div class="container">
+        <div class="workflow-card">
+            <div class="profile-icon">👤</div>
+            <h3>{{ user.name }}</h3>
+            <p>({{ user.role }})</p>
+            
+            <a href="#" class="action-btn">Assign Subject</a>
+            <a href="#" class="action-btn">View Assigned Subject</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>eAkadamik © copyright 2026. All Rights Reserved.</p>
+        <p>Powered By C-DAC Mohali</p>
+    </footer>
+
+</body>
+</html>

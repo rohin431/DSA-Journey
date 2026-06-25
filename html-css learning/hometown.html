@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MY HOMETOWn</title>
+    <link rel="icon" type="image/x-icon" href="channel-pictures/channel-1.jpeg">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        margin: 0;
+        text-align: center;
+        background-image: url("https://i0.wp.com/www.pakistangulfeconomist.com/wp-content/uploads/2017/10/poonch-3.jpg?ssl=1");
+        background-size: cover;
+      }
+      .HERO-SECTION {
+        background-image: url("https://cliffhangersindia.com/wp-content/uploads/2024/04/Pahalgam-3.jpg.webp");
+        background-size: cover;
+        border: none;
+        font-family: "Archivo Black", sans-serif;
+        color: #f5f7fa;
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+        padding: 10px 0 20px 0;
+        margin-bottom: 20px;
+      }
+
+      img {
+        width: 100px;
+      }
+      .img1,
+      .img2,
+      .img3 {
+        width: 100px;
+        border-radius: 50%;
+      }
+      .img2 {
+        margin-bottom: 10px;
+      }
+      .img3 {
+        margin-bottom: 20px;
+      }
+      .GUIDE-SECTION {
+        border: 10px solid rgb(184, 199, 182);
+        background-color: rgb(154, 239, 141);
+        width: 600px;
+        margin: 0 auto 0 auto;
+        border-radius: 15px;
+        font-family: "Archivo Black", sans-serif;
+        color: #f1faee;
+      }
+      .ACTIVITIES-SECTION {
+        border: 10px solid #457b9d;
+        background-color: rgb(30, 175, 219);
+        border-radius: 15px;
+        width: 900px;
+        margin: 0 auto 20px auto;
+        font-family: "Archivo Black", sans-serif;
+        color: #1b4332;
+      }
+
+      .help {
+        display: flex;
+        font-family: "Archivo Black", sans-serif;
+      }
+      #increment-btn{
+      padding:10px 35px 10px 35px;
+      border-radius:10px;
+      background-color:darkgreen;
+      color:white;
+      font-family: "Archivo Black", sans-serif;
+      margin-bottom:30px;
+      }
+      #count-el{
+      font-family: "Archivo Black", sans-serif;
+      color:darkred;
+      }
+    </style>
+  </head>
+  <body>
+    <script src="hometown.js"></script>
+    <div class="HERO-SECTION">
+      <h1>Visit Poonch</h1>
+      <h2>
+        Enjoy culture and landscapes in this vibrant district close to the
+        border of India.
+      </h2>
+    </div>
+
+    <div class="ACTIVITIES-SECTION">
+      <h3>Top three activities to do at Poonch</h3>
+      <div class="help">
+        <div>
+          <img
+            class="img1"
+            src="https://1.bp.blogspot.com/-A5KIb2FCpkc/UAVUxs0IlJI/AAAAAAAANOU/0eaFpSWUB5A/s1600/303670_436291996403355_1050790363_n.jpg"
+          />
+          <p>
+            Poonch has amazing and simply mindblowing landscapes, which you can
+            explore, and enjoy some of the best moments in your life.
+          </p>
+        </div>
+        <div>
+          <img
+            class="img2"
+            src="https://english.bharatexpress.com/wp-content/uploads/2023/05/Untitled-design-2023-05-18T131200.215.webp"
+          />
+          <p>
+            Poonch district has a rich history shaped by ancient kingdoms,
+            medieval rulers, and its strategic importance along historic trade
+            and cultural routes in the western Himalayas.
+          </p>
+        </div>
+        <div>
+          <img
+            class="img3"
+            src="https://th.bing.com/th/id/OIP.Qgdk__VMWJwgSolgoi3jsgHaEK?w=324&h=182&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3"
+          />
+          <p>
+            Poonch district is home to several important religious sites,
+            reflecting a long tradition of spiritual harmony among different
+            faiths.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="GUIDE-SECTION">
+      <h3>Your guide</h3>
+      <p>
+        "I have lived at Poonch for over 10 years, so I can show you all of its
+        best parts and hidden secrets."
+      </p>
+      <h4><strong>Rohin Sharma</strong></h4>
+      <img
+        src="channel-pictures/WhatsApp Image 2025-12-15 at 23.36.47_04f40081.jpg"
+      />
+    </div>
+    <h1 id="count-el">0</h1>
+    <button id="increment-btn" onclick="increment()" >Increment</button>
+    <button id="increment-btn" onclick="decrement()" >Decrement</button>
+  </body>
+</html>
